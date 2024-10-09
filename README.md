@@ -7,15 +7,11 @@ Welcome to the **Python Data Scraping Materials** repository! This repository is
 2. [Requirements](#requirements)
 3. [How to Use](#how-to-use)
 4. [Content Overview](#content-overview)
-    - [Basic Web Scraping](#basic-web-scraping)
-    - [Advanced Web Scraping](#advanced-web-scraping)
-    - [Data Extraction](#data-extraction)
-    - [Handling JavaScript Websites](#handling-javascript-websites)
-    - [Best Practices](#best-practices)
-5. [Project Structure](#project-structure)
-6. [File Reference & Explanation](#file-reference--explanation)
-7. [Contribution Guidelines](#contribution-guidelines)
-8. [License](#license)
+    - [Basic](#basic)
+    - [Intermediate](#intermediate)
+    - [Advanced](#advanced)
+5. [Contribution Guidelines](#contribution-guidelines)
+6. [License](#license)
 
 ## Overview
 This repository contains various Python scripts aimed at teaching you different techniques for **web scraping**. The goal is to cover everything from basic HTML scraping to advanced methods, such as handling dynamic content, managing cookies, and bypassing scraping restrictions.
