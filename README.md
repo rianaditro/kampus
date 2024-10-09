@@ -63,6 +63,9 @@ The repository is structured to cover various aspects of data scraping. Below is
 - **FastAPI**: Simple fastapi for scraping.
   - Relevant File: [`advanced-fastapi.py`](./advanced/advanced-fastapi.py)
 
+- **Asynchronous**: Deep understand on asyncio.
+  - Relevant File: [`learn-asyncio.py`](./advanced/learn-asyncio.py)
+
 ## Contribution Guidelines
 Contributions are welcome! If you'd like to contribute:
 1. Fork the repository.
