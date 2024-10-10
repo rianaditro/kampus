@@ -1,7 +1,8 @@
 from typing import Union
 from fastapi import FastAPI
+from fastapi.responses import FileResponse
 from bs4 import BeautifulSoup as bs
-import requests
+import requests, pandas, io
 
 
 app = FastAPI()
@@ -11,12 +12,12 @@ def read_root():
     return {"status code": 200,
             "message": "ok"}
 
-@app.get("/newsList/{site}")
-def read_item(site:str = "detik"):
+@app.get("/newsList/")
+def read_item(site:str = "detik", download: bool = False):
     if site == "detik":
         site = "https://news.detik.com/indeks"
         
-    # get html
+    # get params
     response = requests.get(site).text
 
     # parsing html
@@ -36,10 +37,27 @@ def read_item(site:str = "detik"):
 
         news.append(data)
 
+    # non-download
+    response = None
+
+    # download as csv
+    if download:
+        csv_file = pandas.DataFrame(news)
+        
+        # stream = io.StringIO(csv_file.to_csv("news.csv", index=False))
+        # response = StreamingResponse(stream, media_type="text/csv")
+
+        csv_file.to_csv("advanced/news.csv", index=False)
+        file_path = "news.csv"
+        response = FileResponse(file_path, filename="news.csv")
+        return response
+
     result = {
         "status code": 200,
-        "message": "ok",
+        "methode": "GET",
+        "message": "OK",
         "count" : len(news),
+        "download": download,
         "data": news
     }
     return result
