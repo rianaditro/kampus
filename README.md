@@ -53,11 +53,20 @@ The repository is structured to cover various aspects of data scraping. Below is
   - Relevant File: [`beginner-intro-requests.py`](./basics/beginner-intro-requests.py)
 
 ### Intermediate
-- **Speed Up Scraping**: Comparing Threading, Connection pooling, and asynchronous in time consumed.
-  - Relevant File: [`speed-up-scraping-method.py`](./intermediate/speed-up-scraping-method.py)
-  
 - **Regex**: Regex daily tasks
   - Relevant File: [`intermediate-regex.py`](./intermediate/intermediate-regex.py)
+
+- **Yield**: use generator to save memory
+  - Relevant File: [`yield-in-action.py`](./intermediate/yield-in-action.py)
+
+- **Selenium**: scraping list of urls
+  - Relevant File: [`selenium-req.py`](./intermediate/selenium-req.py)
+
+- **Selenium: login form**: using request post payload and selenium input form to automate login.
+  - Relevant File: [`login-auth.py`](./intermediate/login-auth.py)
+
+- **Speed Up Scraping**: Comparing Threading, Connection pooling, and asynchronous in time consumed.
+  - Relevant File: [`speed-up-scraping-method.py`](./intermediate/speed-up-scraping-method.py)
 
 ### Advanced
 - **FastAPI**: Simple fastapi for scraping.
