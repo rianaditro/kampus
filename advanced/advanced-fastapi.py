@@ -1,6 +1,6 @@
 from typing import Union
 from fastapi import FastAPI
-from fastapi.responses import FileResponse
+from fastapi.responses import StreamingResponse
 from bs4 import BeautifulSoup as bs
 import requests, pandas, io
 
@@ -43,13 +43,17 @@ def read_item(site:str = "detik", download: bool = False):
     # download as csv
     if download:
         csv_file = pandas.DataFrame(news)
-        
-        # stream = io.StringIO(csv_file.to_csv("news.csv", index=False))
+
+        # create a file object, waiting for file
+        stream = io.StringIO()
         # response = StreamingResponse(stream, media_type="text/csv")
 
-        csv_file.to_csv("advanced/news.csv", index=False)
-        file_path = "news.csv"
-        response = FileResponse(file_path, filename="news.csv")
+        csv_file.to_csv(stream, index=False)
+        file_path = stream.getvalue()
+        response = StreamingResponse(file_path, media_type="text/csv", status_code=200)
+
+        stream.close()
+
         return response
 
     result = {
