@@ -71,6 +71,8 @@ Contributions are welcome! If you'd like to contribute:
 1. Fork the repository.
 2. Create a new branch (`git checkout -b feature-branch`).
 3. Make your changes.
+- Add your content in the folder base on its level (basic, intermediate, advanced)
+- Update the file reference on the README.md file and add description.
 4. Commit your changes (`git commit -m 'Add feature'`).
 5. Push to your branch (`git push origin feature-branch`).
 6. Create a Pull Request.
