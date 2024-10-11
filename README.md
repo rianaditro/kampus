@@ -69,11 +69,15 @@ The repository is structured to cover various aspects of data scraping. Below is
   - Relevant File: [`speed-up-scraping-method.py`](./intermediate/speed-up-scraping-method.py)
 
 ### Advanced
-- **FastAPI**: Simple fastapi for scraping.
-  - Relevant File: [`advanced-fastapi.py`](./advanced/advanced-fastapi.py)
+- **OOP**: Understanding entity, object and OOP principles in data scraping
+  - Relevant File: [`oop1.py`](./advanced/oop1.py)
+  - Relevant File: [`oop2-principles.py`](./advanced/oop2-principles.py)
 
 - **Asynchronous**: Deep understand on asyncio.
   - Relevant File: [`learn-asyncio.py`](./advanced/learn-asyncio.py)
+
+- **FastAPI**: Simple fastapi for scraping.
+  - Relevant File: [`advanced-fastapi.py`](./advanced/advanced-fastapi.py)
 
 ## Contribution Guidelines
 Contributions are welcome! If you'd like to contribute:
