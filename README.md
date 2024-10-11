@@ -52,6 +52,9 @@ The repository is structured to cover various aspects of data scraping. Below is
 - **Requests**: Send requests till get blocked.
   - Relevant File: [`beginner-intro-requests.py`](./basics/beginner-intro-requests.py)
 
+- **Continue vs Pass**: Understanding how pass and continue keyword worked.
+  - Relevant File: [`continue-vs-pass.py`](./basics/continue-vs-pass.py)
+
 ### Intermediate
 - **Regex**: Regex daily tasks
   - Relevant File: [`intermediate-regex.py`](./intermediate/intermediate-regex.py)
