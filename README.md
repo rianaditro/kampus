@@ -62,10 +62,10 @@ The repository is structured to cover various aspects of data scraping. Below is
 - **Yield**: use generator to save memory
   - Relevant File: [`yield-in-action.py`](./intermediate/yield-in-action.py)
 
-- **Selenium**: scraping list of urls and image click automation
+- **Selenium**: scraping list of urls and image click automation, waiting strategy
   - Relevant File: [`selenium-req.py`](./intermediate/selenium-req.py)
   - Relevant File: [`selenium-auto.py`](./intermediate/selenium-auto-click.py)
-  
+  - Relevant File: [`selenium-waitelement.py`](./intermediate/selenium-waitelement.py) 
 
 - **Selenium: login form**: using request post payload and selenium input form to automate login.
   - Relevant File: [`login-auth.py`](./intermediate/login-auth.py)
