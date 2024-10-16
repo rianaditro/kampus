@@ -10,6 +10,29 @@ from curl_cffi import requests as curlRequests
 from curl_cffi.requests import AsyncSession as curlAsyncSession
 
 
+"""
+General Notes:
+- Blocking I/O is a task that need to be completed before the program can continue.
+Imagine a F1 racer in the middle of a race, but he need to pee. Can he stop then continue the race?
+
+- Non-blocking I/O is a task that can be completed in the background.
+When you are cooking an Indomie, you can boil the water while preparing the sauce.
+We are waiting water boiled and wait for the sauce to be ready.
+
+- Asynchronous is a non-blocking I/O task that can be completed in the background.
+
+- Threading
+Threading is like when we taking a notes from lecture/book/etc. 
+First, you read the notes. Then, you write them down.
+You are NOT reading all the notes THEN writing all of them at once. (Synchronous)
+You are reading while you are writing. (Asynchronous)
+BUT you are limited on your brain focus. (CPU processing/Memory usage)
+
+- Multiprocessing
+While threading is done by one person, multiprocessing is done by multiple people.
+"""
+
+
 
 """"
 To speed up the scraping process, you can use the following methods:
@@ -133,9 +156,9 @@ if __name__ == "__main__":
         httpx_with_session,
         curl_with_session,
         threaded_request,
-        # multiprocessing_requests,
-        # async_aiohttp,
-        # async_curl
+        multiprocessing_requests,
+        async_aiohttp,
+        async_curl
     ]
 
     aiohttp_timer = asyncio.run(async_aiohttp(urls))
@@ -179,6 +202,20 @@ for 100 page:
 {'function name': 'basic_curl', 'execution time': 15.319042205810547}
 {'function name': 'basic_httpx', 'execution time': 28.373396396636963}
 """
+
+
+"""
+The most performant method is using threaded_request.
+Why not asynchronous faster?
+
+Because asynchronous or asyncio module run in the single thread.
+While, threading or concurrent.futures module run in multiple threads.
+It implement task execution in asynchronously by separate threads (Threading) 
+or separate process (Multiprocessing)
+
+"""
+
+
 
 """
 Advanced tips:
