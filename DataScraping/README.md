@@ -64,6 +64,11 @@ The repository is structured to cover various aspects of data scraping. Below is
 ---
 15. **Authentication**: Bypass login strategy
 Relevant File: [`15_authentication.md`](./15_authentication/15_authentication.md)
+16. wqwqw
+17. dd
+18. dsd
+19. **Faster Scraping**: Sending multiple URLs concurrently.
+Relevant File: [`19-20_faster_scraping.md`](./19-20_faster_scraping/19-20_faster_scraping.md)
 
 ---
 ## Found a Mistake?

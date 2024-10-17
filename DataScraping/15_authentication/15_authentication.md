@@ -24,7 +24,7 @@ Kampus Remote Worker Indonesia | 2024
 
 ---
 <!-- paginate: true -->
-## What is that?
+## Introduction
 
 When scraping data from websites, you will often encounter authentication mechanisms that protect content behind login forms or API credentials.
 
