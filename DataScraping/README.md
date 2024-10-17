@@ -62,8 +62,8 @@ The repository is structured to cover various aspects of data scraping. Below is
     Manipulate text and validation
 
 ---
-12. **Requests**: Send requests till get blocked.
-Relevant File: [`beginner-intro-requests.py`](./basics/beginner-intro-requests.py)
+15. **Authentication**: Bypass login strategy
+Relevant File: [`15_authentication.md`](./15_authentication/15_authentication.md)
 
 ---
 ## Found a Mistake?
