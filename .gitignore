@@ -163,4 +163,4 @@ cython_debug/
 
 raka/
 newsApi/
-**/task_answer/
+DataScraping/task-answer/
