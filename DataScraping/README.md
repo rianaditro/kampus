@@ -62,12 +62,23 @@ The repository is structured to cover various aspects of data scraping. Below is
     Manipulate text and validation
 
 ---
+11. **Hidden API**: Scraping hidden API.
+Relevant File: [`11_hidden_api.md`](./11_hidden_api/11_hidden_api.md)
+12. **Selenium**: Selenium driver options.
+Relevant File: [`12-13-14_selenium.md`](./12-13-14_selenium/12-13-14_selenium.md)
+13. **Selenium (2)**: Selenium CSS selector and WebElement interactions.
+Relevant File: [`13_selenium.py`](./12-13-14_selenium/13_selenium.py)
+14. **Selenium (3)**: Waiting strategy.
+Relevant File: [`14_selenium.py`](./12-13-14_selenium/14_selenium.py)
 15. **Authentication**: Bypass login strategy
 Relevant File: [`15_authentication.md`](./15_authentication/15_authentication.md)
-16. wqwqw
-17. dd
-18. dsd
+16. Project
+17. Project
+18. **Yield**: Memory efficient scraping.
+Relevant File: [`18_yield.md`](./18_yield/18_yield.md)
 19. **Faster Scraping**: Sending multiple URLs concurrently.
+Relevant File: [`19-20_faster_scraping.md`](./19-20_faster_scraping/19-20_faster_scraping.md)
+20. **Faster Scraping (2)**: Asynchio and Aiohttp.
 Relevant File: [`19-20_faster_scraping.md`](./19-20_faster_scraping/19-20_faster_scraping.md)
 
 ---
