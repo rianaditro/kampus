@@ -80,6 +80,8 @@ Relevant File: [`18_yield.md`](./18_yield/18_yield.md)
 Relevant File: [`19-20_faster_scraping.md`](./19-20_faster_scraping/19-20_faster_scraping.md)
 20. **Faster Scraping (2)**: Asynchio and Aiohttp.
 Relevant File: [`19-20_faster_scraping.md`](./19-20_faster_scraping/19-20_faster_scraping.md)
+28. **Python Style Guide**: Improve code quality using flake8
+Relevant File: [`28_PEP8.md`](./28_PEP8/28_PEP8.md)
 
 ---
 ## Found a Mistake?
