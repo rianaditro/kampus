@@ -1,5 +1,5 @@
 ---
-marp: true
+marp: false
 author: Rian Adi
 theme: gaia
 backgroundColor: white
@@ -80,6 +80,10 @@ Relevant File: [`18_yield.md`](./18_yield/18_yield.md)
 Relevant File: [`19-20_faster_scraping.md`](./19-20_faster_scraping/19-20_faster_scraping.md)
 20. **Faster Scraping (2)**: Asynchio and Aiohttp.
 Relevant File: [`19-20_faster_scraping.md`](./19-20_faster_scraping/19-20_faster_scraping.md)
+22. **OOP**: Implement Object Oriented Programing in scraping.
+Relevant File: [`22-23_OOP.md`](./22-23_OOP/22-23_OOP.md)
+23. **OOP (2)**: Entity and OOP principles.
+Relevant File: [`22-23_OOP.md`](./22-23_OOP/22-23_OOP.md)
 28. **Python Style Guide**: Improve code quality using flake8
 Relevant File: [`28_PEP8.md`](./28_PEP8/28_PEP8.md)
 
