@@ -270,19 +270,45 @@ def about():
 Let's create a product page using extended template. You can improve your last task using this method to return a real HTML page instead of JSON data.
 
 ---
-## Task
+## Handling Forms and Requests
+Forms are one of the most common ways users interact with a web application. The data submitted via forms can be processed either through a GET or POST request:
+
+- GET: Typically used for retrieving data, and the data is passed in the URL as query parameters.
+- POST: Typically used for sending data that should not be visible in the URL (e.g., form submissions, creating or updating resources).
 
 ---
-## Task
+```HTML
+<form action="/search" method="get">
+    <label for="search">Search for a product:</label>
+    <input type="text" id="search" name="category" placeholder="input electronics or clothing">
+    <button type="submit">Search</button>
+</form>
+```
+```python
+@app.route("/search")
+def search():
+    query = request.args.get('category')  # Get 'query' parameter from the URL
+    product_urls = []
 
+    for product in product_list:
+        if product["category"].lower() == query.lower():
+            product_urls.append(product)
+    return render_template("index.html", products=product_urls)
+```
 ---
 ## Task
+Let's add a form to input a new item in the list. Tip: use `request.form` to retrieve user input from forms and validate the input.
 
 ---
-## Task
+## Learn More
+Flask-WTF Explained & How to Use it
+https://www.geeksforgeeks.org/flask-wtf-explained-how-to-use-it/
+
+Flask-WTF
+https://flask-wtf.readthedocs.io/en/1.2.x/quickstart/
 
 ---
-## Task
+## Flask Database
 Check your code using flake8, how many improvement suggestion you have?
 
 ---
