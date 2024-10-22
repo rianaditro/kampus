@@ -308,8 +308,125 @@ Flask-WTF
 https://flask-wtf.readthedocs.io/en/1.2.x/quickstart/
 
 ---
-## Flask Database
-Check your code using flake8, how many improvement suggestion you have?
+## Flask-SQLAlchemy
+CFlask-SQLAlchemy is an Object Relational Mapper (ORM) that allows you to work with databases using Python objects instead of raw SQL queries. This simplifies database interactions and makes your code cleaner and more maintainable.
+
+---
+## Steps to Integrate SQLAlchemy with Flask
+1. **Install Flask-SQLAlchemy.**
+```bash
+pip install flask-sqlalchemy
+
+```
+2. **Configure the database in Flask.**
+Flask-SQLAlchemy supports databases like SQLite, PostgreSQL and MySQL
+
+---
+```python
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+
+# Configure the SQLite database
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///products.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# Initialize the database
+db = SQLAlchemy(app)
+```
+
+---
+3. **Create a model.**
+Create a Python class to represent a database table.
+```python
+class Product(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    category = db.Column(db.String(50), nullable=False)
+    price = db.Column(db.Float, nullable=False)
+
+    def __repr__(self):
+        return f'<Product {self.name}>'
+
+```
+---
+4. **Create the database and the table.**
+```python
+with app.app_context():
+    db.create_all()
+```
+This step will create the products.db SQLite file and the products table based on your model.
+
+---
+5. **Database Operation.**
+**Inserting Data into the Database**
+```python
+@app.route("/add_product")
+def add_product():
+    laptop = Product(name="Laptop", category="Electronics", price=1200)
+    db.session.add(laptop)
+    db.session.commit()
+    return "Product added!"
+```
+
+---
+**Querying the Database**
+```python
+@app.route("/")
+def home():
+    products = Product.query.all()  # Fetch all products from the database
+    return render_template("index.html", products=products)
+
+@app.route("/product/<int:product_id>")
+def product_detail(product_id):
+    product = Product.query.get_or_404(product_id)  # Fetch product by ID
+    return render_template("product_detail.html", product=product)
+```
+
+---
+**Update a Product**
+```python
+@app.route("/update_product/<int:product_id>")
+def update_product(product_id):
+    product = Product.query.get_or_404(product_id)
+    product.price = 1000  # Update the price
+    db.session.commit()  # Save the changes
+    return "Product updated!"
+```
+**Delete a Product**
+```python
+@app.route("/delete_product/<int:product_id>")
+def delete_product(product_id):
+    product = Product.query.get_or_404(product_id)
+    db.session.delete(product)
+    db.session.commit()
+    return "Product deleted!"
+```
+
+---
+## Task
+Create a CRUD app from your last project!
+
+---
+## Learn More
+Flask-Migrate
+https://flask-migrate.readthedocs.io/en/latest/
+
+Managing database migrations and schema changes with Flask and Neon Postgres
+https://neon.tech/guides/flask-database-migrations
+
+How To Add Flask-Migrate To An Existing Project
+https://blog.miguelgrinberg.com/post/how-to-add-flask-migrate-to-an-existing-project
+
+---
+## Learn More
+
+---
+## Learn More
+
+---
+## Learn More
 
 ---
 ## Learn More

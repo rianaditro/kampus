@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 
 
 # Sample data for products
@@ -20,6 +20,17 @@ def home():
 @app.route("/about")
 def about():
     return render_template("about.html")
+
+@app.route("/products/<int:product_id>")
+def products(product_id:int):
+    for product in product_list:
+        if product["id"] == product_id:
+            return render_template("product_detail.html", product=product)
+        else:
+            product = None
+
+    if product is None:
+        return jsonify({"error": "Product not found"}), 404
 
 
 @app.route("/search")
