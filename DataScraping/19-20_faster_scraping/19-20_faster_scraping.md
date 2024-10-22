@@ -79,6 +79,11 @@ Implement multi-threading using ThreadPoolExecutor to your multipage scraping. C
 Try to reuse the same session across all threads. By sharing a session, you reduce connection setup overhead and improve efficiency.
 
 ---
+## Learn More
+ThreadPoolExecutor in Python: The Complete Guide
+https://superfastpython.com/threadpoolexecutor-in-python/
+
+---
 ## Asynchronous
 Asynchronous programming is a paradigm that enables a program to execute multiple tasks concurrently without waiting for each task to complete before starting the next one. 
 
@@ -91,6 +96,26 @@ Not all programs can effectively implement asynchronous programming because **as
 I/O-bound tasks are network requests (e.g., web scraping or API calls), file I/O (e.g., reading or writing large files), database queries.
 
 CPU-bound tasks are mathematical computations, data processing, image or video processing, etc
+
+---
+## A Simple Asynchronous
+```python
+import asyncio
+
+async def count(name):
+    await asyncio.sleep(1)
+    print(f'{name}_1')
+    await asyncio.sleep(1)
+    print(f'{name}_2')
+    await asyncio.sleep(1)
+    print(f'{name}_3')
+
+async def main():
+    await asyncio.gather(count(), count(), count())
+
+if __name__ == "__main__":
+    asyncio.run(main())
+```
 
 ---
 ## Why Async is NOT for all tasks
@@ -133,38 +158,38 @@ requests        ---> aiohttp
 ```
 
 ---
-## Sending Request with Aiohttp
+## Asynchronous with Aiohttp
 ```python
 # Asynchronous function to fetch a single URL
-async def fetch_page(session, url):
-    async with session.get(url) as response:
-        return await response.text()
-
-# Asynchronous function to scrape a list of URLs concurrently
-async def scrape_urls(urls):
+async def fetch_single_page(url):
     async with aiohttp.ClientSession() as session:
-        # Create tasks to fetch each URL asynchronously
-        tasks = [fetch_page(session, url) for url in urls]
-        
-        # Run all tasks concurrently and gather results
-        results = await asyncio.gather(*tasks)
-        
-        return results
+        response = await session.get(url)
+        return await response.text()
+```
+Run it by `asyncio.run(fetch_single_page(url))`
+
+**Quiz**: Does it implement asynchronously? Is it faster than using requests?
+
+---
+## Sending Multiple Request with Aiohttp
+```python
+async def fetch_multiple_pages(urls):
+    async with aiohttp.ClientSession() as session:
+        tasks = []
+        for url in urls:
+            task = asyncio.create_task( 
+                # This will add a 'task' with pending status
+                session.get(url) 
+            )
+            tasks.append(task)
+        return await asyncio.gather(*tasks)
+        #  This runs all tasks concurrently, 
+        # waits for them to finish, and collects their results
 ```
 
 ---
-## Sending Request with Aiohttp
-```python
-if __name__ == "__main__":
-    urls = [f"https://www.bbc.com/search?page={i}" for i in range(10)]
-
-    # Run the async event loop to scrape all URLs
-    scraped_data = asyncio.run(scrape_urls(urls))
-    
-    # Print the scraped content (for demonstration purposes)
-    for i, content in enumerate(scraped_data, 1):
-        print(f"Content from URL {i}: {content[:100]}...")  # Print first 100 characters
-```
+## Task
+Instead of getting the ClientResponse object, try to get the HTML content directly. In addition, use list comprehension. Tip: split function between fetching the HTML content and tasks creation.
 
 ---
 ## Task
@@ -175,6 +200,12 @@ Sending multiple URLs concurrently has many benefits, but it can also cause issu
 
 ---
 ## Learn More
+Asynchronous Web Scraping in Python
+https://www.zenrows.com/blog/asynchronous-web-scraping-python#making-python-requests-async-friendly
+
+Python Asyncio: The Complete Guide
+https://superfastpython.com/python-asyncio/
+
 Learn more on how to achieve best practice data scraping 
 https://asynciolimiter.readthedocs.io/en/latest/
 https://proxiesapi.com/articles/effective-strategies-for-rate-limiting-asynchronous-requests-in-python
