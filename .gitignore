@@ -168,3 +168,8 @@ newsApi/
 DataScraping/task-answer/
 rumah/
 *.csv
+
+archive/
+class_activity/
+homework_answer/
+0_template.md
