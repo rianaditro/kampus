@@ -165,7 +165,7 @@ cython_debug/
 
 raka/
 newsApi/
-DataScraping/task-answer/
+PythonWebScraping/task-answer/
 rumah/
 *.csv
 

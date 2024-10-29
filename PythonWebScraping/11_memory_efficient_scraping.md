@@ -13,8 +13,8 @@ footer: Data Scraping | rianaditro
 <br>
 <br>
 
-# Main Topic
-Memory Efficient Scraping
+# Memory Efficient Scraping
+KELAS DATA SCRAPING
 <!-- <br> -->
 <br>
 <br>

@@ -13,7 +13,7 @@ footer: Data Scraping | rianaditro
 <br>
 <br>
 
-# Handling Dynamic Content with Selenium
+## Handling Dynamic Content with Selenium
 KELAS DATA SCRAPING
 <!-- <br> -->
 <br>
