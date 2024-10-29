@@ -1,111 +1,72 @@
----
-marp: false
-author: Rian Adi
-theme: gaia
-backgroundColor: white
-footer: Data Scraping | rianaditro
----
-<!-- _backgroundColor: grey -->
-<!-- _color: white -->
-<!-- _paginate: skip -->
-<br>
-<br>
-<br>
-<br>
+# Python Web Scraping Course
 
-# KELAS DATA SCRAPING
-Rian Adi Saputro
-<!-- <br> -->
-<br>
-<br>
-<br>
+Welcome to the **Python Web Scraping Course**! This course is designed to equip you with the skills and knowledge needed to extract data from the web effectively. Over the span of **2 months**, you'll delve into various web scraping techniques using Python, covering everything from the basics to advanced topics.
 
-Kampus Remote Worker Indonesia | 2024
+This course is part of learning platform https://learnwithrian.vercel.app/
 
----
-<!-- paginate: true -->
-## Welcome!
+## Course Overview
 
-Welcome to the **Python Data Scraping Class**! This repository is dedicated to providing structured Python examples and materials that will guide you through learning data scraping techniques. 
+In this course, you will learn how to gather data from websites for analysis and automation. We will cover a range of modules that include essential skills in web scraping, data processing, and best practices to handle various challenges associated with web data extraction.
 
-Before we continue, we expect you to have some basic knowledge of 
-- **Python programming**, 
-- **Git** for version control, 
-- **Basic web development**.
+### Duration
+- **Length**: 2 Months
 
----
-## About
-This 2-month class runs 4 days a week, 2 hours per day, with an option to extend to 5 days if more practice is needed. Active participation, asking questions, and engaging in discussions are highly encouraged.
+### Prerequisites
+To get the most out of this course, you should have the following knowledge:
+- **Python Programming**: Familiarity with Python syntax and basic programming concepts.
+- **Git and GitHub**: Understanding version control using Git and how to use GitHub for collaboration.
+- **Basic Web Development**: Some knowledge of HTML, CSS, and how web pages function will be beneficial.
 
-If you need to reschedule or miss a class, please contact the admin in advance.
+## Course Modules
 
-**WARNING: Avoid using ChatGPT-generated code, as it may weaken your problem-solving skills.**
+Below is a list of the modules included in this course:
 
----
-## Requirements
-To run the Python scripts provided in this repository, you will need the following:
-- Python 3.10 or later
-- The list of python package in the requirements.txt
-You can install these dependencies by running the following command:
-```bash
-pip install -r requirements.txt
-```
+1. **[Python Web Scraping](1_data_scraping_introduction.html)**  
+   Learn what web scraping is and how to set up your environment.
 
----
-## Content Overview
-The repository is structured to cover various aspects of data scraping. Below is an overview of the content:
-1. **Introduction Data Scraping**
-    What is data scraping, scraping ethic, market demand.
-2. **Python Data Structure**
-    Understanding list, set, tuple and dictionary.
-3. **String Manipulation**
-    Manipulate text and validation
+2. **[Dealing with String](2_dealing_with_string.html)**  
+   Understand string manipulation techniques to clean data.
 
----
-11. **Hidden API**: Scraping hidden API.
-Relevant File: [`11_hidden_api.md`](./11_hidden_api/11_hidden_api.md)
-12. **Selenium**: Selenium driver options.
-Relevant File: [`12-13-14_selenium.md`](./12-13-14_selenium/12-13-14_selenium.md)
-13. **Selenium (2)**: Selenium CSS selector and WebElement interactions.
-Relevant File: [`13_selenium.py`](./12-13-14_selenium/13_selenium.py)
-14. **Selenium (3)**: Waiting strategy.
-Relevant File: [`14_selenium.py`](./12-13-14_selenium/14_selenium.py)
-15. **Authentication**: Bypass login strategy
-Relevant File: [`15_authentication.md`](./15_authentication/15_authentication.md)
-16. Project
-17. Project
-18. **Yield**: Memory efficient scraping.
-Relevant File: [`18_yield.md`](./18_yield/18_yield.md)
-19. **Faster Scraping**: Sending multiple URLs concurrently.
-Relevant File: [`19-20_faster_scraping.md`](./19-20_faster_scraping/19-20_faster_scraping.md)
-20. **Faster Scraping (2)**: Asynchio and Aiohttp.
-Relevant File: [`19-20_faster_scraping.md`](./19-20_faster_scraping/19-20_faster_scraping.md)
-22. **OOP**: Implement Object Oriented Programing in scraping.
-Relevant File: [`22-23_OOP.md`](./22-23_OOP/22-23_OOP.md)
-23. **OOP (2)**: Entity and OOP principles.
-Relevant File: [`22-23_OOP.md`](./22-23_OOP/22-23_OOP.md)
-28. **Python Style Guide**: Improve code quality using flake8
-Relevant File: [`28_PEP8.md`](./28_PEP8/28_PEP8.md)
+3. **[Python Collections](3_python_collections.html)**  
+   Learn how to effectively use lists and dictionaries in Python.
+
+4. **[Static Web Scraping](4_static_web_scraping.html)**  
+   Practice scraping data from a static website.
+
+5. **[Data Processing with Pandas](5_data_processing_with_pandas.html)**  
+   Learn how to export scraped data in various file formats.
+
+6. **[Scraping Hidden API](6_scraping_hidden_api.html)**  
+   Identify hidden APIs within websites to extract data.
+
+7. **[Handling Dynamic Content with Selenium](7_handling_dynamic_content_with_selenium.html)**  
+   Gain hands-on experience with browser automation using Selenium.
+
+8. **[Scraping with Authentication](8_scraping_with_authentication.html)**  
+   Learn how to bypass login authentication using Selenium and Requests.
+
+9. **[Dynamic Web Scraping](9_dynamic_web_scraping.html)**  
+   Make your scraping scripts more flexible using `argparse`.
+
+10. **[Object Oriented Web Scraping](10_object_oriented_scraping.html)**  
+    Organize your scraping code using object-oriented programming principles.
+
+11. **[Memory Efficient Web Scraping](11_memory_efficient_scraping.html)**  
+    Reduce memory usage in your scraping applications using generators.
+
+12. **[Time Efficient Web Scraping](12_time_efficient_scraping.html)**  
+    Improve performance by using multithreading and asynchronous programming.
+
+13. **[Clean Code & Best Practice](13_clean_code_best_practice.html)**  
+    Learn how to write clean and maintainable code.
+
+14. **[Anti-Scraping Mechanism](14_anti_scraping_mechanism.html)**  
+    Identify and deal with anti-scraping mechanisms on websites.
+
+## Contact
+
+For any inquiries or assistance, feel free to reach out via email at [rianaditro@gmail.com](mailto:rianaditro@gmail.com).
 
 ---
-## Found a Mistake?
-If you spot an error, bug, or have any suggestions for improvements, feel free to message the author. You can reach out by [rianaditro@gmail.com](mailto:rianaditro@gmail.com) to discuss the issue. Your feedback is greatly appreciated!
 
----
-<!-- _backgroundColor: grey -->
-<!-- _color: white -->
-<!-- _paginate: false -->
-<br>
-<br>
-<br>
-<br>
-
-# Thank you
-Any Question?
-<!-- <br> -->
-<br>
-<br>
-<br>
-
-Kampus Remote Worker Indonesia | 2024
-
+We look forward to having you in the course and helping you become proficient in Python web scraping!
